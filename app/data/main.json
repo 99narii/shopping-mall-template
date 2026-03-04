@@ -80,6 +80,8 @@
   },
   "categories": {
     "title": "CATEGORY",
+    "prevAriaLabel": "이전 카테고리",
+    "nextAriaLabel": "다음 카테고리",
     "items": [
       { "label": "모든 제품", "href": "/category", "image": "/images/categories/all.svg",  "imageAlt": "모든 제품 카테고리" },
       { "label": "스킨케어", "href": "/category?tab=skincare","image": "/images/categories/best.svg", "imageAlt": "스킨케어 카테고리" },

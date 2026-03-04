@@ -10,7 +10,7 @@ const props = defineProps({
 <template>
   <article class="category-card">
     <NuxtLink :to="category.href" class="category-card__link">
-      <div v-if="category.image" class="category-card__image-wrap">
+      <!-- <div v-if="category.image" class="category-card__image-wrap">
         <NuxtImg
           :src="category.image"
           :alt="category.imageAlt || category.label"
@@ -19,7 +19,7 @@ const props = defineProps({
           format="webp"
           quality="80"
         />
-      </div>
+      </div> -->
       <p class="category-card__label">{{ category.label }}</p>
     </NuxtLink>
   </article>

@@ -12,9 +12,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   @include tablet {
+    width: 80px;
+  }
+
+  @include mobile {
     width: 100%;
   }
 
@@ -48,6 +52,13 @@
     justify-content: center;
 
     @include tablet {
+      width: 80px;
+      height: 80px;
+      border-radius: 28px;
+      padding: 22px;
+    }
+
+    @include mobile {
       width: 100%;
       height: auto;
       aspect-ratio: 1 / 1;
@@ -56,7 +67,6 @@
     }
 
     @include mobile-xs {
-      border-radius: 50%;
       padding: 18%;
     }
   }
