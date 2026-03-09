@@ -30,11 +30,12 @@ const {
 const showLoginModal = ref(false)
 
 // 내 등급 ID
-const myGradeId = computed(() => authStore.user?.grade?.id || null)
+const myGradeId = computed(() => authStore.user?.grade?.id ?? null)
 
-// 내 등급 쿠폰팩인지 확인
+// 내 등급 쿠폰팩인지 확인 (pack.id가 등급 ID)
 const isMyGradePack = (pack) => {
-  return myGradeId.value && pack.gradeId === myGradeId.value
+  if (myGradeId.value === null) return false
+  return Number(pack.id) === Number(myGradeId.value)
 }
 
 // 쿠폰팩 다운로드
@@ -264,6 +265,15 @@ const handleDownloadAll = async () => {
               </div>
               <div class="grade-pack-card__footer">
                 <BaseButton
+                  v-if="!authStore.isLoggedIn"
+                  :label="couponData.gradePacks.loginRequiredButton"
+                  variant="bg"
+                  color="primary"
+                  size="small"
+                  @click="navigateTo('/login')"
+                />
+                <BaseButton
+                  v-else
                   :label="pack.isDownloaded ? couponData.gradePacks.downloadedButton : couponData.gradePacks.downloadButton"
                   :variant="pack.isDownloaded || !isMyGradePack(pack) ? 'line' : 'bg'"
                   :color="pack.isDownloaded || !isMyGradePack(pack) ? 'black' : 'green'"

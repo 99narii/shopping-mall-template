@@ -13,7 +13,8 @@
     "condition": "등급 조건",
     "benefits": "혜택",
     "downloadButton": "쿠폰팩 다운받기",
-    "downloadedButton": "다운로드 완료"
+    "downloadedButton": "다운로드 완료",
+    "loginRequiredButton": "로그인 후 혜택을 확인해보세요"
   },
   "coupon": {
     "downloadButton": "다운로드",
