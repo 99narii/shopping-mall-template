@@ -63,9 +63,6 @@ pnpm preview
   ├── assets/styles/   # SCSS (tokens → base → components)
   └── composables/     # API, 유틸리티
 
-  ## 시작하기
-  npm install && npm run dev
-
   ## 커스터마이징
   - 텍스트: app/data/*.json 수정
   - 색상/폰트: assets/styles/tokens/ 수정
