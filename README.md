@@ -1,3 +1,5 @@
+## 상세 정보
+https://www.notion.so/e-commerce-318bb97da87b802688e3fe45139523d0?source=copy_link
 
 ## Setup
 
